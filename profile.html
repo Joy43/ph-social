@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>profile social media</title>
+<!-- custom css -->
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./responsive.css">
+
+     <!-- tailwind and daisy ui cdn -->
+
+     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.2.1/dist/full.css" rel="stylesheet" type="text/css" />
+     <script src="https://cdn.tailwindcss.com"></script>
+     <!-- Google font Poppins -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+         rel="stylesheet">
+ <!-- --------------font asewome------------ -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <!-- tailwind custom classes -->
+     <script>
+         tailwind.config = {
+             theme: {
+                 extend: {
+                     colors: {
+                         btn: '#da373d',
+                         'primary': '#E76F51',
+                         'primary-bg': 'rgba(231, 111, 81, 0.10)',
+                     }
+                 }
+             }
+         }
+     </script>
+ 
+     <!-- custom styles -->
+     <style>
+         .font-poppins {
+             font-family: 'Poppins', sans-serif;
+         }
+     </style>
+
+</head>
+<body>
+   
+    <nav>
+
+        <!-- ----------------- left nav --------------------------->
+        
+           <div class="nav-left">
+            <a href="./index.html"><img src="./images/Social-BD LOGO.png" ></a>
+      
+            
+            <ul>
+               
+                <li><img src="./images/notification.png" alt=""></li>
+                <li><img src="./images/message.png" alt=""></li>
+                <li><img src="./images/video.png" alt=""></li>
+            </ul>
+             </div>
+        
+        <!-- right  nav -->
+        
+        
+            <div class="nav-right"></div>
+        
+               
+             
+        
+            <div class="search-box">
+                <div class="border rounded overflow-hidden flex">
+                    <input type="text" class="px-4 py-2" placeholder="Search...">
+                    <!-- <button class="flex items-center bg-slate-400 justify-center px-4 border-l">
+                      <svg class="h-4 w-4 text-grey-dark" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.32 14.9l5.39 5.4a1 1 0 0 1-1.42 1.4l-5.38-5.38a8 8 0 1 1 1.41-1.41zM10 16a6 6 0 1 0 0-12 6 6 0 0 0 0 12z"/></svg>
+                    </button> -->
+                  </div>
+                <!-- <img src="./images/search.png" >
+                <input type="text" placeholder="Search">
+                <div class="profile-deatils">
+
+                  
+
+                    <div class="pd-left"></div>
+
+        
+                    <div class="pd-right"></div>
+
+                </div> -->
+            </div>
+          
+        <div class="nav-user-icon online" onclick="settingMenuToggle()">
+           <img src="./images/friend/joy.png" >
+        </div>
+        <!-- --  setting ------------ -->
+        
+        <div class="settings-menu">
+        
+            <!-- dark mode -->
+        
+            <div id="dark-btn" class="dark-btn-on">
+                <span></span>
+            </div>
+        <!-- iner -->
+        
+           <div class="setting-menu-inner">
+                <div class="user-profile">
+                    <img src="./images/friend/joy.png" alt="">
+                    <div>
+                        <p>Ss joy</p>
+                       <a href="./profile.html"> see your profile</a>
+
+                </div>
+            </div>
+            <!--  -->
+            <hr>
+            <div class="user-profile">
+                <img src="./images/feedback.png" alt="">
+                <div>
+                    <p>Give Feedback</p>
+                   <a href="#"> Help us improve develop</a>
+            </div>
+            </div>
+            <hr>
+          
+        
+        <!-- setting links -->
+            <div class="settings-links">
+                <img src="./images/setting.png" alt="" class="settings-icon">
+                <a href="http://">Settings Privacy <img src="./images/arrow.png" alt="" width="10px"> </a>
+        
+        
+            </div>
+        
+            <!-- help -->
+        
+            <div class="settings-links">
+                <img src="./images/help.png" alt="" class="settings-icon">
+                <a href="http://">Help & Support <img src="./images/arrow.png" alt="" width="10px"> </a>
+            </div>
+        
+            <!-- disply -->
+        <div class="settings-links">
+                <img src="./images/display.png" alt="" class="settings-icon">
+                <a href="http://">Display & Accessibility <img src="./images/arrow.png" alt="" width="10px"> </a>
+            </div>  
+             <!-- logout -->
+        
+             <div class="settings-links">
+                <img src="./images/logout.png" alt="" class="settings-icon">
+                <a href="http://">Logout <img src="./images/arrow.png" alt="" width="10px"> </a>
+            </div>
+            
+           
+        
+            
+        
+        
+        </nav>
+
+
+    
+
+
+
+<!-- ----------------------profile page -->
+<!-- -********************** -->
+
+<div class="profile-container">
+    <img src="./images/cover.png" alt="" class="cover-img">
+    <div class="profile-deatils">
+        <div class="pd-left">
+
+            <div class="pd-row">
+
+            <img src="./images/friend/joy.png" alt="" class="pd-image">
+            <div class="text-blue-300">
+                <h3>SS Joy</h3>
+                <p>120 friends -30 mutual</p>
+                <div  class="flex gap-2">
+                    <div>
+                        <img src="./images/friend/sami (1).png" alt="">
+                <img src="./images/friend/mohibul (1).png" alt="">
+                <img src="./images/friend/shahib (1).png" alt="">
+                    </div>
+                <div>
+                    <img src="./images/friend/shohan (1).png" alt="">
+                <img src="./images/friend/sani (1).png" alt=""> 
+                
+                <img src="./images/friend/shohan (1).png" alt="">
+                
+                </div>
+                <div>
+                    <img src="./images/friend/shohan (1).png" alt="">
+                    <img src="./images/friend/shohan (1).png" alt="">
+                <img src="./images/friend/sani (1).png" alt=""> 
+                
+                
+                </div>
+                </div>
+               
+            </div>
+
+            </div>
+
+        </div>
+
+        <!-- pd right -------------->
+
+        <div class="pd-right">
+
+           <!-- 1st -->
+            <button type="
+            button"><img src="./images/add-friends.png" alt="">Friend</button>
+            <!-- 2nd -->
+            <button type="
+            button"><img src="./images/message.png" alt="">Message</button>
+
+            <br>
+            <a href="http://"><img src="images/more.png" alt=""></a>
+            <!--  -->
+        </div>
+    </div>
+
+    <!-- info  -->
+
+<div class="profile-info">
+    <div class="info-col">
+        <div class="profile-intro">
+            <h3>Intro</h3>
+            <p class="intro-text"> Blieve in yourself and you can do unbelievable things. <img src="./images/feeling.png" alt=""></p>
+            <hr>
+            <ul>
+                <li><img src="./images/profile-job.png" alt=""> Fontend developer</li>
+                <li><img src="./images/profile-study.png" alt="">Study at B.S.C in CSE Dhaka commerce collage </li>
+                <li><img src="./images/profile-study.png" alt=""> went to  Nabarun public School </li>
+                <li><img src="./images/profile-home.png" alt="">Lives in sherpur</li>
+                <li><img src="./images/profile-location.png" alt="">From mirpur</li>
+
+            </ul>
+        </div>
+<!-- 2nd -->
+<div class="profile-intro">
+
+    <div class="title-box">
+        <h3>Photos</h3>
+        <a href="http://">All photos</a>
+    </div>
+
+    
+    <div class="photo-box">
+        
+        <div><img src="./images/friend/joy.png" alt=""></div>
+        <div><img src="./images/friend/sami (1).png" alt=""></div>
+        <div><img src="./images/friend/shahib (1).png"" ></div>
+        <div><img src="./images/friend/shohan (1).png" alt=""></div>
+        <div><img src="./images/friend/sani (1).png" alt=""></div>
+        <div><img src="./images/friend/mohibul (1).png" alt=""></div>
+    </div>
+</div>
+
+<!------ friend ---->
+
+<div class="profile-intro">
+
+    <div class="title-box">
+        <h3>Friends</h3>
+        <a href="http://">All Friends</a>
+    </div>
+
+    
+    <p> 140 (10 muture)</p>
+    <div class="friends-box">
+        
+        
+        <div><img src="./images/friend/joy.png" alt=""><p>ss joy</p></div>
+        <div><img src="./images/friend/sami (1).png" alt=""><p>sami islam</p></div>
+        <div><img src="./images/friend/shahib (1).png"" >shihab hasan</div>
+        <div><img src="./images/friend/shohan (1).png" alt=""><p>sohanur rahman</p></div>
+        <div><img src="./images/friend/sani (1).png" alt=""><p>sazidul islam</p></div>
+        <div><img src="./images/friend/mohibul (1).png" alt=""><p>mohibul</p></div>
+        <div><img src="./images/friend/joy.png" alt=""><p>ss joy</p></div>
+        <div><img src="./images/friend/sami (1).png" alt=""><p>sami islam</p></div>
+        <div><img src="./images/friend/shahib (1).png"" >shihab hasan</div>
+       
+        
+    </div>
+</div>
+
+
+    </div>
+
+    
+    <!-- post col -->
+    <div class="post-col">
+
+        <div class="write-post-container">
+            <div class="user-profile">
+                <img src="./images/friend/joy.png" alt="">
+                <div>
+                    <p>Ss joy</p>
+                    <small><i class="fa-solid fa-caret-down"></i>public</small>
+                </div>
+            </div>
+        
+            <div class="post-input-container">
+                <textarea rows="3" placeholder="whats your name canexpect"></textarea>
+                <div class="add-post-links">
+                    <a href="http://" ><img src="./images/live-video.png" alt="">Live video</a>
+                    
+                    <a href="http://" ><img src="./images/photo.png" alt="">photo/video</a>
+                    <a href="http://" ><img src="./images/feeling.png" alt="">Feing/Activity</a>
+                </div>
+            </div>
+        </div>
+        
+        
+          <!--------- post container  1st ----- -->
+        
+          <div class="post-container">
+        
+            <div class="post-row">
+        
+                <div class="user-profile">
+                    <img src="./images/friend/sani (1).png" alt="">
+                    <div>
+                        <p>sani</p>
+                        <span><i class="fa-solid fa-caret-down"></i>
+                        june 24,10.45</span>
+                    </div>
+                    
+                </div>
+                <a href="http://"><i class="fa-solid fa-ellipsis-v"></i></a>
+        
+            </div>
+        
+        
+            
+            <p class="post-text" >This effort is faithful, in my opinion. We do fantastic work for you.
+As the projector has so many appealing features, surely future projects
+ will be the best.#webdeveloper<span> @ss joy</span> for us for the next level developer <a href="http://">ss-joy</a></p>
+            <img src="./images/sani.jpg" alt="" class="post-img">
+        
+        
+        <div class="post-row">
+            <div class="activity-icons">
+        
+            
+            
+                <div><img src="./images/like-blue.png" alt="">120</div>
+                <div><img src="./images/comments.png" alt="">100</div>
+                <div><img src="./images/share.png" alt="">89</div>
+            </div>
+        
+        <div class="post-profile-icon">
+            <img src="./images/profile.png" alt=""><i class="fa-solid fa-caret-down"></i>
+        </div>
+        
+        </div>
+        
+        </div>
+        
+        <!--         post 2nd        -->
+        
+        <div class="post-container">
+        
+            <div class="post-row">
+        
+                <div class="user-profile">
+                    <img src="./images/friend/mohibul (1).png" alt="">
+                    <div>
+                        <p>Mohibul</p>
+                        <span><i class="fa-solid fa-caret-down"></i>
+                        june 24,10.45</span>
+                    </div>
+                    
+                </div>
+                <a href="http://"><i class="fa-solid fa-ellipsis-v"></i></a>
+        
+            </div>
+        
+        
+            
+            <p class="post-text" >This effort is faithful, in my opinion. We do fantastic work for you.
+As the projector has so many appealing features, surely future projects
+ will be the best.#webdeveloper<span> @ss joy</span> for us for the next level developer <a href="http://">ss-joy</a></p>
+            <img src="./images/mohibul.jpg" alt="" class="post-img">
+        
+        
+        <div class="post-row">
+            <div class="activity-icons">
+        
+            
+            
+                <div><img src="./images/like-blue.png" alt="">120</div>
+                <div><img src="./images/comments.png" alt="">100</div>
+                <div><img src="./images/share.png" alt="">89</div>
+            </div>
+        
+        <div class="post-profile-icon">
+            <img src="./images/profile.png" alt="">
+            <i class="fa-solid fa-caret-down"></i>
+        </div>
+        
+        </div>
+        
+        </div>
+        
+        <!--   post 3rd -->
+        <div class="post-container">
+        
+            <div class="post-row">
+        
+                <div class="user-profile">
+                    <img src="./images/friend/shohan (1).png" alt="">
+                    <div>
+                        <p>shohan</p>
+                        <span><i class="fa-solid fa-caret-down"></i>
+                        june 24,10.45</span>
+                    </div>
+                    
+                </div>
+                <a href="http://"><i class="fa-solid fa-ellipsis-v"></i></a>
+        
+            </div>
+        
+        
+            
+            <p class="post-text" >This effort is faithful, in my opinion. We do fantastic work for you.
+As the projector has so many appealing features, surely future projects
+ will be the best.#webdeveloper<span> @ss joy</span> for us for the next level developer <a href="http://">ss-joy</a></p>
+            <img src="./images/shohan.png" alt="" class="post-img">
+        
+        
+        <div class="post-row">
+            <div class="activity-icons">
+        
+            
+            
+                <div><img src="./images/like-blue.png" alt="">120</div>
+                <div><img src="./images/comments.png" alt="">100</div>
+                <div><img src="./images/share.png" alt="">89</div>
+            </div>
+        
+        <div class="post-profile-icon">
+            <img src="./images/profile.png" alt=""><i class="fa-solid fa-caret-down"></i>
+        </div>
+        
+        </div>
+        
+        </div>
+        
+        <!-- postcontain 4 -->
+        <div class="post-container">
+        
+            <div class="post-row">
+        
+                <div class="user-profile">
+                    <img src="./images/friend/shahib (1).png" alt="">
+                    <div>
+                        <p>shihab hasan</p>
+                        <span><i class="fa-solid fa-caret-down"></i>
+                        june 24,10.45</span>
+                    </div>
+                    
+                </div>
+                <a href="http://"><i class="fa-solid fa-ellipsis-v"></i></a>
+        
+            </div>
+        
+        
+            
+            <p class="post-text" >This effort is faithful, in my opinion. We do fantastic work for you.
+As the projector has so many appealing features, surely future projects
+ will be the best.#webdeveloper<span> @ss joy</span> for us for the next level developer <a href="http://">ss-joy</a></p>
+            <img src="./images/shahib.png" alt="" class="post-img">
+        
+        
+        <div class="post-row">
+            <div class="activity-icons">
+        
+            
+            
+                <div><img src="./images/like-blue.png" alt="">120</div>
+                <div><img src="./images/comments.png" alt="">100</div>
+                <div><img src="./images/share.png" alt="">89</div>
+            </div>
+        
+        <div class="post-profile-icon">
+            <img src="./images/profile.png" alt=""><i class="fa-solid fa-caret-down"></i>
+        </div>
+        
+        </div>
+        
+        </div>
+        
+        <!-- 6th post -->
+        <div class="post-container">
+        
+            <div class="post-row">
+        
+                <div class="user-profile">
+                    <img src="./images/friend/sami (1).png" alt="">
+                    <div>
+                        <p>sami</p>
+                        <span><i class="fa-solid fa-caret-down"></i>
+                        june 24,10.45</span>
+                    </div>
+                    
+                </div>
+                <a href="http://"><i class="fa-solid fa-ellipsis-v"></i></a>
+        
+            </div>
+        
+        
+            
+            <p class="post-text" >This effort is faithful, in my opinion. We do fantastic work for you.
+As the projector has so many appealing features, surely future projects
+ will be the best.#webdeveloper<span> @ss joy</span> for us for the next level developer <a href="http://">ss-joy</a></p>
+            <img src="./images/sami.png" alt="" class="post-img">
+        
+        
+        <div class="post-row">
+            <div class="activity-icons">
+        
+            
+            
+                <div><img src="./images/like-blue.png" alt="">120</div>
+                <div><img src="./images/comments.png" alt="">100</div>
+                <div><img src="./images/share.png" alt="">89</div>
+            </div>
+        
+        <div class="post-profile-icon">
+            <img src="./images/profile.png" alt=""><i class="fa-solid fa-caret-down"></i>
+        </div>
+        
+        </div>
+        
+        </div>
+
+    </div>
+</div>
+
+</div>
+
+    <!-- fotter -->
+
+    <div class="footer">
+        <p> copyrighht-2022 - shahsultan islam joy</p>
+    
+    </div>
+
+    <!-- font asewom -->
+
+    <script src="https://kit.fontawesome.com/4b2acde997.js" crossorigin="anonymous"></script>
+
+<!-- js -->
+<script src="./script.js"></script>
+    
+</body>
+</html>
