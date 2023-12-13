@@ -744,3 +744,8 @@ nav{
         bottom: 0;
         left: 0;
     }
+    .footer{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
